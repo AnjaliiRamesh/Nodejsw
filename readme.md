@@ -1,3 +1,4 @@
+# Node js Architecture
 Node.js follows a single-threaded, event-driven, non-blocking architecture.
 When a client sends a request, Node.js processes it on the main thread.
 If the request involves a non-blocking operation, it is handled asynchronously and the event loop continues processing other requests.
