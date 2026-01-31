@@ -25,6 +25,30 @@ One correction: 8 CPU cores don't necessarily mean we can only assign 8 threads.
 
 
 Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+# Rest Api
+
+# Building Rest api
+GET/user - list all users => returns html document render
+
+dynamic path parameter
+GET/api/user/:id
+:id => variable
+GET/api/user/1 - get the user with id 1 =>returs json data
+GET/api/user/2 - get the user with id 2
+
+POST/api/user - create new user 
+
+PATCH/api/user/1 - edit the user with id 1
+
+
+
+DELETE/api/user/1 - delete the user with id 1
+
+/user => throw html data
+/api/user => throw json date
+
+
+
 
 # Middleware
 Middleware functions can perform the following tasks:
@@ -35,3 +59,5 @@ End the request-response cycle.
 Call the next middleware function in the stack.
 
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+
