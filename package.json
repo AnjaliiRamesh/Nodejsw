@@ -1,0 +1,20 @@
+{
+  "name": "nodejsw",
+  "version": "1.0.0",
+  "description": "Node.js follows a single-threaded, event-driven, non-blocking architecture.\r When a client sends a request, Node.js processes it on the main thread.\r If the request involves a non-blocking operation, it is handled asynchronously and the event loop continues processing other requests.\r If the request involves a blocking operation like file system access or cryptographic work, it is offloaded to the libuv thread pool.\r Once the operation is completed, its callback is pushed to the event queue and executed by the event loop.\r This architecture allows Node.js to handle a large number of concurrent connections efficiently without creating a new thread for each request.",
+  "homepage": "https://github.com/AnjaliiRamesh/Nodejsw#readme",
+  "bugs": {
+    "url": "https://github.com/AnjaliiRamesh/Nodejsw/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnjaliiRamesh/Nodejsw.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  }
+}
