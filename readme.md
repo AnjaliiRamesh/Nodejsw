@@ -20,3 +20,17 @@ So:
 👉 but its completion is handled by the event loop.
 
 One correction: 8 CPU cores don't necessarily mean we can only assign 8 threads. We can assign many more threads, but if the number of threads exceeds the number of cores, the CPU will context switch between them, leading to performance degradation. This happens because each thread consumes system memory  in the form of a Thread Control Block (TCB). If frequent Context Switches occur, the CPU core has to frequently read and write the TCB from main memory  to the CPU registers, which can degrade the performance.
+
+
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+# Middleware
+Middleware functions can perform the following tasks:
+
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware function in the stack.
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
