@@ -60,4 +60,16 @@ Call the next middleware function in the stack.
 
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
 
+app.use((req, res, next) => {
+  console.log("hello from middleware1");//return state nhi dala to postman me kuch bhi nhi aayega
+  return res.json({ message: "response from middleware1" });//return state de diya to postman me ye aayega
+  next(); //next call karne se agla middleware ya route handler chalta hai
+}); 
+
+app.use((req, res, next) => {
+  console.log("hello from middleware2");
+  return res.end("response from middleware2"); 
+});
+end next middleware ke pass jane hi nhi dega wahi end ho jayega 
+
 
